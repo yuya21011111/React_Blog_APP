@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div class="bg-blue-300">
@@ -7,24 +8,24 @@ const Navbar = () => {
     </header>
     <ul className="md:flex justify-end">
     <li className="border-b md:border-none">
-      <a href="#" class="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
-        >HRとは</a>
+      <Link to="/blog" class="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
+        >Blogとは？
+      </Link>
     </li>
     <li className="border-b md:border-none">
-      <a href="#" className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
-        >機能一覧</a>
+      <Link to="/" className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
+        >Home
+      </Link>
     </li>
     <li className="border-b md:border-none">
-      <a href="#" className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
-        >料金プラン</a>
+      <Link to="/createpost"className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
+        >Post
+      </Link>
     </li>
     <li className="border-b md:border-none">
-      <a href="#" className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
-        >お知らせ</a>
-    </li>
-    <li>
-      <a href="#" className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
-        >お問い合わせ</a>
+      <Link to="/login"className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
+        >Login
+      </Link>
     </li>
   </ul>
   </div>
