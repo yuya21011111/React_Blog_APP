@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBlog,  faHouse, faRightToBracket, faPaste } from '@fortawesome/free-solid-svg-icons'
+import { faBlog,  faHouse, faRightToBracket, faPaste, faBackward } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+const Navbar = ({ isAuth }) => {
   return (
     <div class="bg-blue-300">
     <header className="container mx-auto flex justify-between items-center text-white">
@@ -27,11 +27,16 @@ const Navbar = () => {
         ><FontAwesomeIcon className='h-5 w-5 mr-2' icon={faPaste} />Post
       </Link>
     </li>
-    <li className="border-b md:border-none">
+
+    { isAuth ?  <li className="border-b md:border-none">
+      <Link to="/logout"className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
+        ><FontAwesomeIcon className='h-5 w-5 mr-2' icon={faBackward } />Logout
+      </Link>
+    </li> :  <li className="border-b md:border-none">
       <Link to="/login"className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
         ><FontAwesomeIcon className='h-5 w-5 mr-2' icon={faRightToBracket} />Login
       </Link>
-    </li>
+    </li> }
   </ul>
   </div>
   )
