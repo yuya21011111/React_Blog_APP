@@ -27,7 +27,6 @@ const Navbar = ({ isAuth }) => {
         ><FontAwesomeIcon className='h-5 w-5 mr-2' icon={faPaste} />Post
       </Link>
     </li>
-
     { isAuth ?  <li className="border-b md:border-none">
       <Link to="/logout"className="block px-8 py-2 my-4 hover:bg-gray-100 rounded"
         ><FontAwesomeIcon className='h-5 w-5 mr-2' icon={faBackward } />Logout
